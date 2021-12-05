@@ -197,7 +197,6 @@ class GetCounts extends StatelessWidget {
   final String documentId;
 
   GetCounts(this.documentId);
-
   @override
   Widget build(BuildContext context) {
     CollectionReference counts = FirebaseFirestore.instance.collection('pingpongcount');
