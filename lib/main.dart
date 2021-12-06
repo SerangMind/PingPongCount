@@ -193,7 +193,6 @@ class GetCounts extends StatelessWidget {
   final String documentId;
 
   GetCounts(this.documentId);
-
   @override
   Widget build(BuildContext context) {
     CollectionReference counts =
@@ -213,8 +212,8 @@ class GetCounts extends StatelessWidget {
 
         if (snapshot.connectionState == ConnectionState.done) {
           //return Text( "Success!");
-          Map<String, dynamic> data =
-              snapshot.data.data() as Map<String, dynamic>;
+          // Map<String, dynamic> data = snapshot.data.data() as Map<String, dynamic>;
+          Map<String, dynamic> data = snapshot.data.data();
           return Text("Server Counts: ${data['count1']}, ${data['count2']}");
           //return Text("Full Name: ${data['full_name']} ${data['last_name']}");
         }
